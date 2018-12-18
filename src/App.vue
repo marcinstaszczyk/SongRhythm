@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h1>Rhythm of songs from YouTube</h1>
+    <YTRhythm/>
+    <RhythmLine/>
+    <RhythmControls/>
+    <BooleanDialog ref="booleanDialog"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import YTRhythm from './components/YTRhythm.vue';
+import RhythmLine from './components/RhythmLine.vue';
+import RhythmControls from './components/RhythmControls.vue';
+import BooleanDialog from './components/core/BooleanDialog.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    YTRhythm,
+    RhythmLine,
+    RhythmControls,
+    BooleanDialog,
   },
 })
 export default class App extends Vue {}
@@ -22,8 +31,26 @@ export default class App extends Vue {}
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+
+  h1 {
+    text-align: center;
+  }
 }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
+      url('../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
+      url('../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
+      url('../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
+      url('../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 </style>
