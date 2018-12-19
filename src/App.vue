@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Rhythm of songs from YouTube</h1>
+    <h1>Rhythm of songs (from YouTube)</h1>
     <YTRhythm/>
     <RhythmLine/>
     <RhythmControls/>

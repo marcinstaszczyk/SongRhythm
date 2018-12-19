@@ -1,6 +1,6 @@
 {
-  "name": "yt-rhythm",
-  "short_name": "yt-rhythm",
+  "name": "SongRhythm",
+  "short_name": "SongRhythm",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
