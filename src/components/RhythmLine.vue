@@ -1,7 +1,7 @@
 <template>
 <div>
   <svg :width="width" :height="height" :viewBox="svgViewBox">
-    <rect v-if="$store.state.player.videoLength" id="time" width="1" :height="height" :x="indicatorX"/>
+    <rect v-if="$store.state.player.videoDuration" id="time" width="1" :height="height" :x="indicatorX"/>
     <circle v-for="point in rhythmPoints" :key="point.key" :class="point.class" :cx="point.x" :cy="point.y" r="4" />
   </svg>
 </div>
